@@ -1,0 +1,11 @@
+# Contains token from huggingface.co
+.env
+
+# Chatlogs directory
+logs/
+
+# model cache
+cache.json
+
+# bytecode
+__pycache__/
