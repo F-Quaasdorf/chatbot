@@ -12,12 +12,6 @@ if not HF_TOKEN:
 # standard model: mistralai/Mistral-Small-24B-Instruct-2501
 MODEL = "mistralai/Mistral-Small-24B-Instruct-2501"
 
-# Standard parameters for text-generation
-GENERATION_PARAMS = {"max_tokens": 500,
-                     "temperature": 0.5,
-                     "top_p": 0.95,
-                     "top_k": 50}
-
 # system prompt for Assistant
 SYSTEM_PROMPT = "Du bist ein Bibliotheksassistent. Antworte immer auf Deutsch."
 
@@ -28,3 +22,25 @@ CACHE_TTL = 7 * 24 * 60 * 60  # 7 days
 # Logging directory
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)  # makes sure that logs/ exists
+
+# Standard parameters for text-generation
+GENERATION_PARAMS = {"max_tokens": 500,
+                     "temperature": 0.5,
+                     "top_p": 0.95,
+                     "top_k": 50}
+
+# Alternative Presets
+PRESET_PARAMS = {"creative": {"max_tokens": 800,
+                              "temperature": 0.9,
+                              "top_p": 0.95,
+                              "top_k": 50},
+                 
+                 "precise": {"max_tokens": 400,
+                             "temperature": 0.2,
+                             "top_p": 0.9,
+                             "top_k": 40},
+                 
+                 "long": {"max_tokens": 1500,
+                          "temperature": 0.6,
+                          "top_p": 0.95,
+                          "top_k": 50}}

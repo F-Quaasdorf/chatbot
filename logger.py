@@ -20,7 +20,7 @@ def log_message(role: str, content: str):
         f.write(f"{role.capitalize()}: {content}\n")
 
 
-def reset_conversation():
+def reset_conversation(preset: str = "standard"):
     """Starts new conversation and creates new log file."""
     global conversation, current_log_file
    
@@ -31,7 +31,8 @@ def reset_conversation():
     current_log_file = os.path.join(LOG_DIR, f"conversation_{timestamp}.log")
     
     with open(current_log_file, "w", encoding="utf-8") as f:
-        f.write(f"New conversation has started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"New conversation has started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")        
+        f.write(f"Preset: {preset}\n")
         f.write("=" * 60 + "\n")
     
-    print(f"New conversation has started. Log file: {current_log_file}")
+    print(f"New conversation has started. Log file: {current_log_file} (Preset: {preset})")
