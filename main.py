@@ -11,10 +11,10 @@ def main():
     if preset not in PRESET_PARAMS:
         preset = None
         preset_label = "standard"
-        print("→ Standardparameter werden verwendet.\n")
+        print("Standardparameter werden verwendet.\n")
     else:
         preset_label = preset
-        print(f"→ Preset '{preset}' wird verwendet.\n")
+        print(f"Preset '{preset}' wird verwendet.\n")
         
     # Reset conversation and start log file
     reset_conversation(preset_label)
