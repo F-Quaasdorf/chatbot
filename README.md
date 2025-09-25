@@ -21,6 +21,7 @@ Die Konfiguration befindet sich in `config.py`.
   + `temperature`: Kreativität (zwischen 0 = konservativ, 1 = sehr kreativ, Standard: 0.5).
   + `top_p`: Sampling nach Wahrscheinlichkeiten (zwischen 0 = deterministisch und 1 = kreativ, Standard: 0.95).
   + `top_k`: Anzahl der bei jedem Schritt berücksichtigten Token (Standard: 50).
+
 Die folgenden Presets können ausgewählt werden, um die Standardeinstellungen für die Textgenerierung zu überschreiben:
 - `creative`: Längere und kreativere Ausgaben.
 - `precise`: Kürzere und präzisere Ausgaben.
