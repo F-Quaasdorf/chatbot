@@ -27,6 +27,10 @@ def reset_conversation(preset: str = "standard"):
     conversation = [{"role": "system", 
                      "content": SYSTEM_PROMPT}]
     
+    now = datetime.now()
+    day_folder = now.strftime("%Y-%m-%d")
+    os.makedirs(os.path.join(LOG_DIR, day_folder), exist_ok=True)
+    
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     current_log_file = os.path.join(LOG_DIR, f"conversation_{timestamp}.log")
     
