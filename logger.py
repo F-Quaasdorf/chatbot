@@ -3,7 +3,7 @@ from datetime import datetime
 from config import LOG_DIR, SYSTEM_PROMPT
 
 # global state
-conversation = [{"role": "system", 
+conversation = [{"role": "system",
                  "content": SYSTEM_PROMPT}]
 
 current_log_file = None
